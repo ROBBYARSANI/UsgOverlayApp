@@ -1,0 +1,67 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.usgandroidapp'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.usgandroidapp"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        // Disable compression for TFLite model file so TFLite can mmap it directly
+        aaptOptions {
+            noCompress "tflite"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    // Exclude META-INF files that conflict when merging TFLite dependencies
+    packagingOptions {
+        pickFirst 'META-INF/INDEX.LIST'
+        pickFirst 'META-INF/io.netty.versions.properties'
+        excludes += ['META-INF/DEPENDENCIES']
+    }
+}
+
+dependencies {
+    // ---------------------------------------------------------------
+    // TensorFlow Lite core interpreter
+    // Version 2.14.0 is the latest stable as of 2024
+    // ---------------------------------------------------------------
+    implementation 'org.tensorflow:tensorflow-lite:2.14.0'
+
+    // TFLite Support Library - provides ImageProcessor, TensorImage,
+    // and helper utilities for pre/post processing
+    implementation 'org.tensorflow:tensorflow-lite-support:0.4.4'
+
+    // TFLite GPU delegate - enables GPU acceleration (optional, auto-fallback)
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.14.0'
+
+    // TFLite GPU delegate API (needed alongside GPU delegate)
+    implementation 'org.tensorflow:tensorflow-lite-gpu-api:2.14.0'
+
+    // AndroidX Core and AppCompat
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.cardview:cardview:1.0.0'
+}
