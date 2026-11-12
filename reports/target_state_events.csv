@@ -1,0 +1,2 @@
+status,timestamp_ns,raw_yolo_confidence,candidate_accepted,state,left,top,right,bottom,mask_present,fresh_interval_ms,coast_duration_ms,lost_event,notes
+NOT_RUN,,,,,,,,,,,,,Gate 1 failed; temporal state-machine evaluation was not authorized

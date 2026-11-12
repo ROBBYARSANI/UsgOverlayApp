@@ -1,0 +1,8 @@
+config_id,config_name,model_path,model_size_mb,threads,xnnpack,delegate,init_ms,prep_med_ms,model_med_ms,post_med_ms,mask_med_ms,ema_med_ms,pipe_med_ms,pipe_mean_ms,pipe_p95_ms,actual_fps,theo_fps,wall_sec,detected_pct,avg_conf,iou_baseline
+A,"FP32 Baseline (CPU 4T, XNNPACK)",YoloV8_320.tflite,12.60,4,true,"CPU (4T, XNNPACK=true)",114.69,10.06,372.67,0.24,0.38,0.01,383.25,417.13,547.44,2.40,2.61,83.45,100.0,0.687,1.000
+B1,"FP32 CPU 3T (XNNPACK)",YoloV8_320.tflite,12.60,3,true,"CPU (3T, XNNPACK=true)",81.52,9.66,372.71,0.17,0.34,0.01,382.82,401.16,462.31,2.49,2.61,80.25,100.0,0.687,1.000
+B2,"FP32 CPU 2T (XNNPACK)",YoloV8_320.tflite,12.60,2,true,"CPU (2T, XNNPACK=true)",124.51,9.53,371.98,0.15,0.32,0.01,381.99,382.33,385.16,2.61,2.62,76.48,100.0,0.687,1.000
+B3,"FP32 CPU 4T (No-XNNPACK / Ref)",YoloV8_320.tflite,12.60,4,false,"CPU (4T, XNNPACK=false)",24.30,9.07,307.47,0.14,0.30,0.00,316.88,323.78,339.69,3.09,3.16,64.77,100.0,0.687,1.000
+B4,"FP32 YoloV26 (CPU 4T, XNNPACK)",YoloV26_320.tflite,10.54,4,true,"CPU (4T, XNNPACK=true)",124.59,9.47,321.72,0.05,0.03,0.00,331.51,332.40,339.48,3.01,3.02,66.49,100.0,0.617,0.557
+B5,"FP32 YoloV26 (CPU 3T, XNNPACK)",YoloV26_320.tflite,10.54,3,true,"CPU (3T, XNNPACK=true)",60.84,9.49,322.17,0.05,0.01,0.00,331.90,332.05,334.27,3.01,3.01,66.43,100.0,0.617,0.557
+B6,"FP32 NNAPI Delegate",YoloV8_320.tflite,12.60,4,true,"NNAPI Delegate",150.39,9.38,371.92,0.13,0.28,0.00,381.63,381.93,384.87,2.62,2.62,76.40,100.0,0.687,1.000

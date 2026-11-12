@@ -33,6 +33,13 @@
             </intent-filter>
         </activity>
 
+        <!-- Deterministic local replay test surface. It never requests MediaProjection. -->
+        <activity
+            android:name=".ReplayActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+
         <!-- VeinDetectionService: Foreground Service dengan tipe mediaProjection.
              foregroundServiceType wajib dideklarasikan untuk Android 14+ agar
              service diizinkan menggunakan MediaProjection API di foreground. -->

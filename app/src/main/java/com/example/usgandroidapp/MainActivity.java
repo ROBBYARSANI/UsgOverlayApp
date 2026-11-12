@@ -75,8 +75,62 @@ public class MainActivity extends AppCompatActivity {
         mStartButton.setOnClickListener(v -> onStartClicked());
         mStopButton.setOnClickListener(v -> onStopClicked());
 
+        VeinOpticalFlowTracker.initOpenCV();
+
         boolean running = VeinDetectionService.isRunning();
         setUIState(running, running ? "Status: Deteksi berjalan..." : "Status: Siap dimulai.");
+
+        checkBenchmarkIntent(getIntent());
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        checkBenchmarkIntent(intent);
+    }
+
+    private void checkBenchmarkIntent(Intent intent) {
+        if (intent != null && intent.hasExtra("debug_mode")) {
+            boolean debug = intent.getBooleanExtra("debug_mode", true);
+            OverlayView.sDebugMode = debug;
+            Toast.makeText(this, "Debug Mode: " + (debug ? "ON (Yellow RAW vs Cyan EMA)" : "OFF"), Toast.LENGTH_SHORT).show();
+        }
+        if (intent != null && intent.hasExtra("temporal_mode")) {
+            String modeStr = intent.getStringExtra("temporal_mode");
+            VeinDetectionService.setModeByName(modeStr);
+            Toast.makeText(this, "Temporal Mode: " + VeinDetectionService.sTemporalMode, Toast.LENGTH_SHORT).show();
+        }
+        if (intent != null && intent.hasExtra("export_kalman_metrics")) {
+            PerformanceProfiler.getInstance().exportKalmanCsv(getApplicationContext());
+            Toast.makeText(this, "Kalman Tracking CSV exported!", Toast.LENGTH_SHORT).show();
+        }
+        if (intent != null && intent.hasExtra("export_temporal")) {
+            PerformanceProfiler.getInstance().exportTemporalCsv(getApplicationContext());
+            Toast.makeText(this, "Temporal CSV exported!", Toast.LENGTH_SHORT).show();
+        }
+        if (intent != null && intent.hasExtra("export_hybrid_metrics")) {
+            PerformanceProfiler.getInstance().exportHybridTrackingCsv(getApplicationContext());
+            Toast.makeText(this, "Hybrid Tracking CSV exported!", Toast.LENGTH_SHORT).show();
+        }
+        if (intent != null && intent.hasExtra("benchmark")) {
+            String target = intent.getStringExtra("benchmark");
+            mStatusText.setText("Menjalankan TFLite Benchmark (" + target + ")...");
+            getWindow().addFlags(android.view.WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+            new Thread(() -> {
+                if ("reproducibility".equalsIgnoreCase(target) || "rep".equalsIgnoreCase(target)) {
+                    Log.i(TAG, "Memicu BenchmarkSuite.runReproducibilitySuite dari intent...");
+                    BenchmarkSuite.runReproducibilitySuite(getApplicationContext());
+                } else {
+                    Log.i(TAG, "Memicu BenchmarkSuite.runAll dari intent...");
+                    BenchmarkSuite.runAll(getApplicationContext());
+                }
+                runOnUiThread(() -> {
+                    mStatusText.setText("Status: Benchmark Selesai! Cek Logcat / CSV.");
+                    Toast.makeText(MainActivity.this, "Benchmark TFLite Selesai!", Toast.LENGTH_LONG).show();
+                });
+            }).start();
+        }
     }
 
     @Override

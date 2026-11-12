@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "run_label": "old_raw",
+  "model": "YoloV8_320.tflite",
+  "frame_source": "RecordedVideoFrameSource",
+  "media_projection_used": false,
+  "completed_inferences": 199,
+  "detections": 117,
+  "audit_samples": 3
+}

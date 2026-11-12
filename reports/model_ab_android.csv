@@ -1,0 +1,2 @@
+status,device,temporal_mode,baseline_model,candidate_model,source_id,frame_id,ground_truth,true_detection,false_positive,missed_detection,confidence,mask_iou,latency_ms,notes
+NOT_RUN,SM-T295,RAW,YoloV8_320.tflite,YoloV8_320_clean_hardneg_fp32.tflite,,,,,,,,,,Gate 1 failed; candidate was not exported or deployed

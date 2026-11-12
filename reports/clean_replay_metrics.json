@@ -1,0 +1,147 @@
+{
+  "source_video": "D:\\D4 TEKNIK KOMPUTER\\TA\\Data_Citra_USG\\Subjek_1\\WirelessUSG2026-07-29-16-12-25.mp4",
+  "device": "SM-T295 / Android 11",
+  "frame_hash_mismatches": 0,
+  "ground_truth_note": "Existing project morphology-assisted reference; 30 px match gate.",
+  "old_model": {
+    "completed_inferences": 199,
+    "detections": 117,
+    "presence_rate": 0.5879396984924623,
+    "detection_streaks": [
+      38,
+      38,
+      2,
+      39
+    ],
+    "miss_streaks": [
+      50,
+      30,
+      2
+    ],
+    "longest_detection_streak": 39,
+    "longest_miss_streak": 50,
+    "tp": 111,
+    "fp": 6,
+    "fn": 0,
+    "tn": 82,
+    "precision": 0.9487179487179487,
+    "recall": 1.0,
+    "false_blink_events": 0,
+    "mean_centroid_error_px": 0.7078011670479997,
+    "mean_confidence": 0.8317570256410256,
+    "mean_mask_foreground_ratio": 0.7501664188034188,
+    "mean_latency_ms": 324.9578894472362,
+    "median_latency_ms": 316.155,
+    "mean_fresh_inference_interval_ms": 355.88098484848484,
+    "median_fresh_inference_interval_ms": 343.67650000000003,
+    "mean_fresh_detection_interval_ms": 607.452051724138
+  },
+  "hardnegative_model": {
+    "completed_inferences": 199,
+    "detections": 159,
+    "presence_rate": 0.7989949748743719,
+    "detection_streaks": [
+      48,
+      2,
+      2,
+      16,
+      44,
+      2,
+      45
+    ],
+    "miss_streaks": [
+      8,
+      4,
+      2,
+      4,
+      12,
+      10
+    ],
+    "longest_detection_streak": 48,
+    "longest_miss_streak": 12,
+    "tp": 111,
+    "fp": 48,
+    "fn": 0,
+    "tn": 40,
+    "precision": 0.6981132075471698,
+    "recall": 1.0,
+    "false_blink_events": 0,
+    "mean_centroid_error_px": 2.7482639966424323,
+    "mean_confidence": 0.7247504025157233,
+    "mean_mask_foreground_ratio": 0.7659948490566038,
+    "mean_latency_ms": 350.74878894472363,
+    "median_latency_ms": 321.605,
+    "mean_fresh_inference_interval_ms": null,
+    "median_fresh_inference_interval_ms": null,
+    "mean_fresh_detection_interval_ms": null
+  },
+  "selected_model": "YoloV8_320.tflite",
+  "coast_trials": [
+    {
+      "factor": 1.0,
+      "coast_ms": 343.67650000000003,
+      "blink_count": 0,
+      "max_hidden_ms": 0.0,
+      "ghost_events": 5,
+      "max_ghost_ms": 1019.5179999999964,
+      "total_ghost_ms": 3061.7960000000003,
+      "mean_reacquisition_ms": 0.0
+    },
+    {
+      "factor": 1.5,
+      "coast_ms": 515.51475,
+      "blink_count": 0,
+      "max_hidden_ms": 0.0,
+      "ghost_events": 5,
+      "max_ghost_ms": 1019.5179999999964,
+      "total_ghost_ms": 3061.7960000000003,
+      "mean_reacquisition_ms": 0.0
+    },
+    {
+      "factor": 2.0,
+      "coast_ms": 687.3530000000001,
+      "blink_count": 0,
+      "max_hidden_ms": 0.0,
+      "ghost_events": 5,
+      "max_ghost_ms": 1367.6219999999958,
+      "total_ghost_ms": 4157.588000000002,
+      "mean_reacquisition_ms": 0.0
+    }
+  ],
+  "selected_coast_factor": 1.0,
+  "interpolation_trials": [
+    {
+      "duration_ms": 0,
+      "max_display_step_px": 169.30630842130475,
+      "mean_display_step_px": 5.186777966841093,
+      "display_steps_over_10px": 6,
+      "max_visual_lag_px": 0.0,
+      "detector_coordinates_changed": false
+    },
+    {
+      "duration_ms": 50,
+      "max_display_step_px": 169.30630842130475,
+      "mean_display_step_px": 1.7490297795161824,
+      "display_steps_over_10px": 7,
+      "max_visual_lag_px": 40.32030579152499,
+      "detector_coordinates_changed": false
+    },
+    {
+      "duration_ms": 75,
+      "max_display_step_px": 169.30630842130475,
+      "mean_display_step_px": 1.0518640632055363,
+      "display_steps_over_10px": 5,
+      "max_visual_lag_px": 48.77144188542862,
+      "detector_coordinates_changed": false
+    },
+    {
+      "duration_ms": 100,
+      "max_display_step_px": 169.30630842130475,
+      "mean_display_step_px": 0.8770644958506804,
+      "display_steps_over_10px": 6,
+      "max_visual_lag_px": 50.400382239406234,
+      "detector_coordinates_changed": false
+    }
+  ],
+  "selected_interpolation_ms": 75
+}

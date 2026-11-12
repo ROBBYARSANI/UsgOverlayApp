@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "date": "2026-10-29 12:33:24",
+    "environment": "laptop_cpu",
+    "warning": "Hasil ini bukan performa Android. Gunakan untuk perbandingan relatif saja.",
+    "warmup_runs": 3,
+    "bench_runs": 20
+  },
+  "results": {
+    "YoloV8_320.tflite": {
+      "mean_ms": 31.44,
+      "median_ms": 31.15,
+      "min_ms": 30.45,
+      "max_ms": 33.27,
+      "std_ms": 0.84,
+      "est_fps": 31.8,
+      "runs": 20,
+      "status": "ok",
+      "size_mb": 12.6,
+      "input_shape": [
+        1,
+        3,
+        320,
+        320
+      ]
+    },
+    "YoloV26_320.tflite": {
+      "mean_ms": 26.62,
+      "median_ms": 26.54,
+      "min_ms": 25.62,
+      "max_ms": 27.6,
+      "std_ms": 0.53,
+      "est_fps": 37.6,
+      "runs": 20,
+      "status": "ok",
+      "size_mb": 10.54,
+      "input_shape": [
+        1,
+        3,
+        320,
+        320
+      ]
+    },
+    "best.tflite": {
+      "mean_ms": 120.02,
+      "median_ms": 119.59,
+      "min_ms": 113.17,
+      "max_ms": 150.28,
+      "std_ms": 7.55,
+      "est_fps": 8.3,
+      "runs": 20,
+      "status": "ok",
+      "size_mb": 10.61,
+      "input_shape": [
+        1,
+        3,
+        640,
+        640
+      ]
+    },
+    "yoloV8.tflite": {
+      "mean_ms": 140.86,
+      "median_ms": 138.31,
+      "min_ms": 130.49,
+      "max_ms": 157.43,
+      "std_ms": 8.06,
+      "est_fps": 7.1,
+      "runs": 20,
+      "status": "ok",
+      "size_mb": 12.68,
+      "input_shape": [
+        1,
+        3,
+        640,
+        640
+      ]
+    }
+  }
+}

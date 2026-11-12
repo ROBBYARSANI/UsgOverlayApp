@@ -59,6 +59,9 @@ dependencies {
     // TFLite GPU delegate API (needed alongside GPU delegate)
     implementation 'org.tensorflow:tensorflow-lite-gpu-api:2.14.0'
 
+    // OpenCV Android (official from Maven Central)
+    implementation 'org.opencv:opencv:4.9.0'
+
     // AndroidX Core and AppCompat
     implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'com.google.android.material:material:1.12.0'

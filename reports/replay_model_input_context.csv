@@ -1,0 +1,4 @@
+file,frame_index,video_timestamp_ms,overlay_visible,hud_visible,context
+replay_model_input_01.png,0,0.000,false,false,before any detection
+replay_model_input_02.png,1,41.668,true,false,bbox and mask visible in presentation layer
+replay_model_input_03.png,2,83.337,true,true,bbox, mask, and HUD visible in presentation layer

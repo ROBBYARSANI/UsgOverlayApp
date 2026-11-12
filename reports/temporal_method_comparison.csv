@@ -1,0 +1,5 @@
+method,mean_error_px,max_error_px,mean_iou,jitter_px_frame,max_jitter_px,drift_events,disappear_events,disappear_dur_ms,visual_jumps,ghost_mean_ms,ghost_max_ms,compute_overhead_ms
+RAW_YOLO,5.89,24.80,0.8541,1.55,25.17,0,3,166.7,0,83.3,166.7,0.0000
+YOLO_EMA,11.58,31.99,0.7472,0.42,9.60,4,2,62.5,0,281.2,541.7,0.0100
+YOLO_LK_OPTICAL_FLOW,17.44,79.20,0.6442,8.36,82.11,11,0,0.0,3,906.2,2083.3,6.2647
+YOLO_KALMAN_FILTER,7.86,25.17,0.8033,0.44,8.00,0,3,222.2,0,197.9,375.0,0.0137

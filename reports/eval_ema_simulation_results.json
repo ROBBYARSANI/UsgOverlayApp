@@ -1,0 +1,293 @@
+{
+  "meta": {
+    "date": "2026-10-29 12:33:10",
+    "type": "synthetic_simulation",
+    "warning": "Simulasi sintetis. Bukan data USG nyata. Tidak dapat diklaim sebagai akurasi klinis.",
+    "n_frames_per_scenario": 60,
+    "max_hold_frames": 6
+  },
+  "ema_configs": {
+    "no_ema": {
+      "description": "Tanpa EMA \u2014 output raw model",
+      "alpha_still": 1.0,
+      "alpha_fast": 1.0,
+      "move_thresh": 0.0,
+      "jump_thresh": 1.0
+    },
+    "static_ema_020": {
+      "description": "EMA statis alpha=0.20 (nilai ALPHA_STILL saat ini)",
+      "alpha_still": 0.2,
+      "alpha_fast": 0.2,
+      "move_thresh": 0.0,
+      "jump_thresh": 9999.0
+    },
+    "static_ema_055": {
+      "description": "EMA statis alpha=0.55 (nilai lama sebelum adaptive)",
+      "alpha_still": 0.55,
+      "alpha_fast": 0.55,
+      "move_thresh": 0.0,
+      "jump_thresh": 9999.0
+    },
+    "adaptive_ema_current": {
+      "description": "Adaptive EMA \u2014 implementasi aktual (ALPHA_STILL=0.20, ALPHA_FAST=1.0, MOVE=12, JUMP=70)",
+      "alpha_still": 0.2,
+      "alpha_fast": 1.0,
+      "move_thresh": 12.0,
+      "jump_thresh": 70.0
+    }
+  },
+  "scenario_results": [
+    {
+      "config": "no_ema",
+      "mae_px": 0.0,
+      "jitter_mean_px": 3.321,
+      "jitter_std_px": 1.688,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "probe_diam"
+    },
+    {
+      "config": "static_ema_020",
+      "mae_px": 1.949,
+      "jitter_mean_px": 0.496,
+      "jitter_std_px": 0.244,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "probe_diam"
+    },
+    {
+      "config": "static_ema_055",
+      "mae_px": 1.221,
+      "jitter_mean_px": 1.517,
+      "jitter_std_px": 0.776,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "probe_diam"
+    },
+    {
+      "config": "adaptive_ema_current",
+      "mae_px": 1.949,
+      "jitter_mean_px": 0.496,
+      "jitter_std_px": 0.244,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "probe_diam"
+    },
+    {
+      "config": "no_ema",
+      "mae_px": 0.0,
+      "jitter_mean_px": 3.496,
+      "jitter_std_px": 1.698,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "probe_geser_pelan"
+    },
+    {
+      "config": "static_ema_020",
+      "mae_px": 4.464,
+      "jitter_mean_px": 1.135,
+      "jitter_std_px": 0.386,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "probe_geser_pelan"
+    },
+    {
+      "config": "static_ema_055",
+      "mae_px": 1.519,
+      "jitter_mean_px": 1.888,
+      "jitter_std_px": 0.749,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "probe_geser_pelan"
+    },
+    {
+      "config": "adaptive_ema_current",
+      "mae_px": 4.464,
+      "jitter_mean_px": 1.135,
+      "jitter_std_px": 0.386,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "probe_geser_pelan"
+    },
+    {
+      "config": "no_ema",
+      "mae_px": 0.0,
+      "jitter_mean_px": 7.256,
+      "jitter_std_px": 3.103,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "probe_geser_cepat"
+    },
+    {
+      "config": "static_ema_020",
+      "mae_px": 20.691,
+      "jitter_mean_px": 5.26,
+      "jitter_std_px": 1.035,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "probe_geser_cepat"
+    },
+    {
+      "config": "static_ema_055",
+      "mae_px": 4.7,
+      "jitter_mean_px": 5.842,
+      "jitter_std_px": 1.707,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "probe_geser_cepat"
+    },
+    {
+      "config": "adaptive_ema_current",
+      "mae_px": 12.626,
+      "jitter_mean_px": 5.45,
+      "jitter_std_px": 1.795,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "probe_geser_cepat"
+    },
+    {
+      "config": "no_ema",
+      "mae_px": 0.0,
+      "jitter_mean_px": 3.889,
+      "jitter_std_px": 1.929,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "gerak_lalu_berhenti"
+    },
+    {
+      "config": "static_ema_020",
+      "mae_px": 8.527,
+      "jitter_mean_px": 2.168,
+      "jitter_std_px": 1.583,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "gerak_lalu_berhenti"
+    },
+    {
+      "config": "static_ema_055",
+      "mae_px": 2.18,
+      "jitter_mean_px": 2.71,
+      "jitter_std_px": 1.68,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "gerak_lalu_berhenti"
+    },
+    {
+      "config": "adaptive_ema_current",
+      "mae_px": 6.738,
+      "jitter_mean_px": 2.184,
+      "jitter_std_px": 1.739,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "gerak_lalu_berhenti"
+    },
+    {
+      "config": "no_ema",
+      "mae_px": 0.73,
+      "jitter_mean_px": 2.093,
+      "jitter_std_px": 1.954,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "miss_30pct"
+    },
+    {
+      "config": "static_ema_020",
+      "mae_px": 1.6,
+      "jitter_mean_px": 0.322,
+      "jitter_std_px": 0.313,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "miss_30pct"
+    },
+    {
+      "config": "static_ema_055",
+      "mae_px": 1.193,
+      "jitter_mean_px": 0.958,
+      "jitter_std_px": 0.923,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "miss_30pct"
+    },
+    {
+      "config": "adaptive_ema_current",
+      "mae_px": 1.6,
+      "jitter_mean_px": 0.322,
+      "jitter_std_px": 0.313,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "miss_30pct"
+    },
+    {
+      "config": "no_ema",
+      "mae_px": 0.0,
+      "jitter_mean_px": 6.341,
+      "jitter_std_px": 22.969,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "lompat_mendadak"
+    },
+    {
+      "config": "static_ema_020",
+      "mae_px": 13.232,
+      "jitter_mean_px": 3.364,
+      "jitter_std_px": 7.063,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "lompat_mendadak"
+    },
+    {
+      "config": "static_ema_055",
+      "mae_px": 3.516,
+      "jitter_mean_px": 4.37,
+      "jitter_std_px": 13.807,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "lompat_mendadak"
+    },
+    {
+      "config": "adaptive_ema_current",
+      "mae_px": 1.948,
+      "jitter_mean_px": 3.578,
+      "jitter_std_px": 23.414,
+      "miss_frames": 0,
+      "miss_rate_pct": 0.0,
+      "n_frames_eval": 60,
+      "scenario": "lompat_mendadak"
+    }
+  ],
+  "convergence_frames": {
+    "no_ema": 1,
+    "static_ema_020": 14,
+    "static_ema_055": 4,
+    "adaptive_ema_current": 1
+  },
+  "interpretation": {
+    "mae_px": "Rata-rata error posisi centroid (piksel) vs ground truth. Lebih kecil = lebih akurat posisi.",
+    "jitter_mean_px": "Rata-rata perubahan posisi antar frame (piksel). Lebih kecil = lebih halus, tapi bisa berarti lag.",
+    "miss_rate_pct": "Persentase frame di mana overlay hilang (melebihi hold frames). 0% = overlay selalu tampil.",
+    "convergence_frames": "Berapa frame untuk mencapai 95% target setelah posisi berubah mendadak. Lebih kecil = lebih responsif."
+  }
+}

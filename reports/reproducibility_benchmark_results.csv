@@ -1,0 +1,7 @@
+repetition,config_id,config_name,xnnpack,threads,init_ms,model_med_ms,model_mean_ms,model_p95_ms,pipe_med_ms,pipe_p95_ms,actual_fps,wall_sec,temp_start_c,temp_end_c,pss_mb,iou_baseline
+1,A,"FP32 CPU 4T (XNNPACK)",true,4,116.71,370.96,371.41,374.43,381.58,384.95,2.62,76.41,25.3,25.7,128,1.000
+1,B3,"FP32 CPU 4T (No-XNNPACK)",false,4,18.27,304.20,313.14,361.70,314.11,371.90,3.10,64.60,25.7,25.9,159,1.000
+2,B3,"FP32 CPU 4T (No-XNNPACK)",false,4,7.56,1048.86,1046.75,1265.03,1061.10,1307.08,0.94,212.15,25.9,27.7,191,1.000
+2,A,"FP32 CPU 4T (XNNPACK)",true,4,179.08,480.29,486.33,553.41,494.60,570.22,2.00,99.86,27.7,28.3,179,1.000
+3,A,"FP32 CPU 4T (XNNPACK)",true,4,130.52,372.56,383.77,477.06,382.17,487.83,2.54,78.73,28.3,28.4,210,1.000
+3,B3,"FP32 CPU 4T (No-XNNPACK)",false,4,12.84,1037.68,1019.18,1123.10,1051.40,1133.34,0.97,206.31,28.4,28.8,207,1.000

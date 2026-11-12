@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "run_label": "hardneg_raw",
+  "model": "YoloV8_320_clean_hardneg_fp32.tflite",
+  "frame_source": "RecordedVideoFrameSource",
+  "media_projection_used": false,
+  "completed_inferences": 199,
+  "detections": 159,
+  "audit_samples": 3
+}

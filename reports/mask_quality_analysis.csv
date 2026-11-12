@@ -1,0 +1,2 @@
+status,sample_id,label,confidence,mask_area_px,bbox_area_px,mask_to_bbox_ratio,connected_component_count,centroid_inside_bbox,mask_aspect_ratio,compactness,temporal_mask_iou,notes
+NOT_RUN,,,,,,,,,,,,Gate 1 failed and no labelled Gate-1-clean Android outputs were available
